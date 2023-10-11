@@ -4,16 +4,19 @@ import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
   page = ''
+
   user = null
+
   /** @type {import('./models/Account.js').Account | null} */
   // @ts-ignore
+
   account = null
-  /** @type {import('./models/Value.js').Value[]} */
+
   socketData = []
 
   // SECTION ADDT'L GLOBAL VARIABLES
 
-
+  pokedex = []
 
 
 
