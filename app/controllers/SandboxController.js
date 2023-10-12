@@ -12,8 +12,11 @@ function _drawMyPokedex() {
 
 export class SandboxController {
   constructor() {
-    sandboxService.getMyPokedex();
+    AppState.on('account', sandboxService.getMyPokedex)
     AppState.on('myPokedex', _drawMyPokedex)
   }
 
+  capture() {
+    sandboxService.capture();
+  }
 }

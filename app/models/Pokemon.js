@@ -7,7 +7,8 @@ export class Pokemon {
     this.weight = data.weight || ''
     this.height = data.height || ''
     this.types = data.types || []
-    this.creatorID = data.creatorID || {}
+    this.creator = data.creator || {}
+    this.creatorId = data.creatorId || ''
   }
 
   get activePokemonTemplate() {
@@ -23,7 +24,7 @@ export class Pokemon {
             <p class="w-50">Types: ${this.types[0]?.type.name}</p>
           </span>
           <button class="btn btn-primary fs-4 m-2 align-self-end"
-            onclick="app.PokedexController.capture('${this.name}')">
+            onclick="app.SandboxController.capture()">
             <i class="mdi mdi-pokeball"></i> Catch</button>
         </div>
     `
@@ -37,7 +38,7 @@ export class Pokemon {
 //  weight: ''
 //  height: ''
 //  types: {}
-//  creatorID: {}
+//  creatorId: {}
 //
 //
 // {
@@ -66,10 +67,10 @@ export class Pokemon {
 //   "types": [
 //     {}
 //   ],
-//     "creatorId": {
-//     "type": "ObjectId",
-//       "required": true,
-//         "ref": "Account"
+//    "creatorId": {
+//        "type": "ObjectId",
+//        "required": true,
+//        "ref": "Account"
 //   }
 // }
 

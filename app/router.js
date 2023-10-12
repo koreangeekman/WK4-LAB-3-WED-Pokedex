@@ -1,4 +1,5 @@
 import { PokedexController } from "./controllers/PokedexController.js";
+import { SandboxController } from "./controllers/SandboxController.js";
 
 /**
  * Register your routes for the application here
@@ -7,7 +8,8 @@ import { PokedexController } from "./controllers/PokedexController.js";
 export const router = [
   {
     path: '',
-    controller: PokedexController,
+    controller: [PokedexController, SandboxController],
+    // @ts-ignore
     view: null
   }
 ]

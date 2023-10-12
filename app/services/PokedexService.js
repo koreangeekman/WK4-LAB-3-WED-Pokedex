@@ -3,10 +3,6 @@ import { Pokemon } from "../models/Pokemon.js";
 import { Pop } from "../utils/Pop.js";
 import { api, pokiApi } from "./AxiosService.js";
 
-// function _saveData() {
-//   saveState('myPokedex', AppState.myPokedex)
-// }
-
 
 class PokedexService {
 
