@@ -9,8 +9,9 @@ export const api = axios.create({
   withCredentials: true
 })
 
-export const pokApi = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2/pokemon',
+// @ts-ignore
+export const pokiApi = axios.create({
+  baseURL: 'https://pokeapi.co/api/v2/',
   timeout: 5000
 })
 

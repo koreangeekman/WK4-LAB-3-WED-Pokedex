@@ -1,1 +1,51 @@
 /* BASIC STYLES HERE */
+body {
+  background-image: url(https://plus.unsplash.com/premium_photo-1666901328577-e8f9671e7ea2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1900&q=60);
+  background-position: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: whitesmoke;
+}
+
+button {
+  width: fit-content;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 5px solid black;
+  background-color: #12345678;
+}
+
+.cardTitle {
+  border: 5px solid #123456b0;
+  width: fit-content;
+}
+
+.cardData {
+  border: 5px solid #123456b0;
+}
+
+.pokemonImg {
+  height: 42dvh;
+  width: 100%;
+}
+
+.pokedex {
+  height: 72dvh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}

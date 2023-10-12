@@ -1,3 +1,4 @@
+import { Pokemon } from "./models/Pokemon.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
@@ -18,13 +19,15 @@ class ObservableAppState extends EventEmitter {
 
   pokedex = []
 
+  activePokemon = null
 
+  myPokedex = []
 
   // !SECTION ADDT'L GLOBAL VARIABLES
 
   // Used to load initial data
   init() {
-
+    // this.myPokedex = loadState('myPokedex', Pokemon)
   }
 }
 

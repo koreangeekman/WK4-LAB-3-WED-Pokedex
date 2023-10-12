@@ -28,12 +28,8 @@
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
-      </div>
+      <button class="btn btn-primary flex-grow-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#myPokedex"
+        aria-controls="offcanvasRight" onclick="app.SandboxController.getMyPokedex()">My Pokedex</button>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
     </nav>
     <!-- SECTION HEADER -->
@@ -44,19 +40,45 @@
     <section id="router-view">
       <!-- primary viewport -->
 
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 col-md-7 p-5 d-flex flex-column" id="activePokemon">
+            <div class="card align-self-center p-5 m-5 fs-2">Select a Pokemon</div>
+            <!-- draw in the active pokemon - overwrites the above line -->
+          </div>
 
+          <div class="col-12 col-lg-4 col-md-5 p-5">
+            <div class="card p-1 shadow">
+              <div class="pokedex px-3 fs-5" id="pokemonList">
+                <!-- draw in pokedex list -->
+              </div>
+            </div>
+            <span class="d-flex justify-content-between">
+              <button class="btn btn-primary fs-4 m-2" onclick="app.PokedexController.priorPage()">Previous</button>
+              <button class="btn btn-primary fs-4 m-2" onclick="app.PokedexController.nextPage()">Next</button>
+            </span>
+          </div>
+
+        </div>
+      </div>
 
     </section>
+
+    <div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="myPokedex" aria-labelledby="myPokedexLabel">
+      <div class="offcanvas-header">
+        <h5 id="myPokedexLabel">My Pokedex</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="myPokedexList">
+        ...
+      </div>
+    </div>
     <!-- !SECTION MAIN-->
   </main>
 
-  <!-- SECTION FOOTER-->
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
-    <!-- !SECTION FOOTER-->
-  </footer>
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
